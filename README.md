@@ -11,7 +11,7 @@ STEPS:
 ** Clone the Reachakra Ui Repo and run the commands below:
 git add .
 git commit -m "first commit"
-git remote set-url origin https://github.com/chrisdesignsofficial/newrepo.git
+git remote set-url origin https://github.com/chrisdesignsofficial/nano.git
 git branch -M main
 git push -u origin main
 
