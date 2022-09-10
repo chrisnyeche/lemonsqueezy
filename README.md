@@ -5,7 +5,13 @@ This project was done uisng react [React](https://reactjs.org/), and chakra ui [
 
 ## Local usage
 After cloning, you run the following commands for git
-($ git remote set-url origin https://git-repo/new-repository.git)
+
+STEPS:
+** Create your project Repo. [Do not add README file]
+** Clone the Reachakra Ui Repo
+** git branch -M main
+** git push -u origin main
+** git remote set-url origin https://git-repo/new-repository.git
 
 To view locally:
 In the project directory, you can run:
