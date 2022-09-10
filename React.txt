@@ -1,0 +1,62 @@
+React is a Javascript library that is used to build web applications and interactive user interfaces for web.
+
+A Library is pre-wriiten reusable snippet like boostrap, that can be reused by the developer to save time and boost more efficiency.
+
+REACT COMPONENTS 
+They are reusable building blocks that are used to form parts of the user interface.
+
+XTICS OF COMPONENTS
+Reusable
+Renders Efficiently
+Nested
+
+TYPES OF COMPONENTS
+Statless Functional Component(js & jsx formats): Javascript functions that returns Html.
+
+Statefull Class Component(js & jsx formats): Javascript es^6 functions that returns Html.
+
+RULES
+HTML elements must be enclosed in a div.
+
+Xtra Feature in React
+1. import 
+
+//importing Default component
+import ClassComponent from './Components/classComponent';
+
+//importing Named components
+import {ClassComponent1, ClassComponent2} './Components/classComponent';
+
+2a.Default export: Only one default object can be imported but can be renamed.
+
+class ClassComponent extends React.Component{
+  render(){
+    return <p> I am class a component.</p>
+  }
+}
+
+export default ClassComponent
+
+2b.Named export: Multiple objects can be imported but cannot be renamed.
+
+export class ClassComponent1 extends React.Component{
+  render(){
+    return <p> I am class component one.</p>
+  }
+}
+
+export class ClassComponent2 extends React.Component{
+  render(){
+    return <p></p>
+  }
+}
+
+
+Syntax:
+export default nameOfComponent
+
+Syntax:
+import nameOfComponent from href;
+the call the function.
+
+You can rename an imported file when importing it.
