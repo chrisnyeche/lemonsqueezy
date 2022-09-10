@@ -8,8 +8,8 @@ After cloning, you run the following commands for git
 
 STEPS:
 ** Create your project Repo. [Do not add README file]
-** git remote set-url origin https://git-repo/new-repository.git
 ** Clone the Reachakra Ui Repo
+** git remote set-url origin https://git-repo/new-repository.git
 ** git branch -M main
 ** git push -u origin main
 

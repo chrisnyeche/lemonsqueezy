@@ -10,6 +10,7 @@ Reusable
 Renders Efficiently
 Nested
 
+
 TYPES OF COMPONENTS
 Statless Functional Component(js & jsx formats): Javascript functions that returns Html.
 
