@@ -1,7 +1,15 @@
-.App {
-  text-align: center;
+/* Import Custom Font */
+@font-face {
+  font-family: customFont;
+  src: url("./Font/EloquiaText-ExtraLight.otf");
 }
 
+body{
+  background-color: aqua;
+  font-family: customFont;
+}
+
+/* Remove focus on Boostrap button outline */
 .btn:focus {
   outline: none;
   box-shadow: none;

@@ -1,5 +1,5 @@
 {
-  "name": "designopers",
+  "name": "nano",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "sweetalert2": "^11.4.26",
     "web-vitals": "^2.1.4"
   },

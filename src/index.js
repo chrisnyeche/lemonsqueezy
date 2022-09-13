@@ -7,7 +7,6 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import "./index.css";
 
 // AOS
 import "aos/dist/aos.css";
