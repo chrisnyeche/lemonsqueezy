@@ -14,7 +14,7 @@ export function Logo() {
 // Arrow Icon
 export function Arrow() {
   return (
-    <svg width="130" height="113" viewBox="0 0 130 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="70" height="100" viewBox="0 0 130 113" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M64.5617 112.085L0 47.5809L14.3148 33.2081L54.4196 73.3128V0H74.7038V73.3128L114.751 33.2081L129.065 47.5809L64.5617 112.085Z" fill="white" />
     </svg>
   );
@@ -23,7 +23,7 @@ export function Arrow() {
 // MultipleArrows icons
 export function MultipleArrows() {
   return (
-    <svg width="47" height="47" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="68" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M54.6915 49.9538L37.9902 33.2525L54.6915 16.5513L58.3946 20.2693L48.035 30.6289H67.0001V35.8762H48.035L58.3946 46.2358L54.6915 49.9538Z" fill="white" />
       <path d="M35.8762 67.0001H30.6289V48.035L20.2693 58.3946L16.5513 54.6915L33.2525 37.9902L49.9538 54.6915L46.2358 58.3946L35.8762 48.035V67.0001Z" fill="white" />
       <path d="M12.3086 50.4337L8.59051 46.7306L18.9651 36.371H0V31.1238H18.9651L8.59051 20.7492L12.3086 17.0461L28.9949 33.7474L12.3086 50.4337Z" fill="white" />

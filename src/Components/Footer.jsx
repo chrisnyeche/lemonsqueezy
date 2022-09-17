@@ -14,8 +14,8 @@ const Footer = () => {
             </Flex>
 
             <VStack spacing={"5"} pt="110px" pb="100px" color="#99998f" fontWeight={500}>
-                <Icon as={MultipleArrows} w={6} h={6}/>
-                <Text as="p"  fontSize={"17"}>
+                <Icon as={MultipleArrows} w={6} h={6} />
+                <Text as="p" textAlign={"center"} fontSize={"17"}>
                 Nano is a platform where creators publish their world. <br /> Publish your own links in style with nano.site
                 </Text>
                 <Text as="p">

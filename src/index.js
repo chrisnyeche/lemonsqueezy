@@ -14,6 +14,9 @@ import "aos/dist/aos.css";
 //import animate
 import 'animate.css';
 
+// import animate on scroll react
+import "animate.css/animate.min.css";
+
 // `ChakraProvider` component
 import { ChakraProvider } from "@chakra-ui/react";
 
