@@ -132,7 +132,7 @@ export function PublishCarousel() {
           {/* Slider */}
           <Slider {...settings}>
             {/* First Carousel- Nano */}
-            <Box backgroundImage={`url(${Nano})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} maxW={"420px"} h="410px" w="90%" mx={5} px={10} borderRadius={"10px"} className="hvr-grow">
+            <Box backgroundImage={`url(${Nano})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} maxW={"420px"} h="410px" m={5} px={"2xl"} borderRadius={"10px"} className="hvr-grow">
               <Flex justifyContent={"center"} alignItems={"center"} h="100%" onMouseEnter={() => setIsNano(true)} onMouseLeave={() => setIsNano(false)}>
                 {isNano && (
                   <VStack>
@@ -146,7 +146,7 @@ export function PublishCarousel() {
             </Box>
 
             {/* Second Carousel - Studio */}
-            <Box backgroundImage={`url(${ClientStudio})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} mx={5} px={10} borderRadius={"10px"} className="hvr-grow">
+            <Box backgroundImage={`url(${ClientStudio})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} m={5} px={"2xl"} borderRadius={"10px"} className="hvr-grow">
               <Flex justifyContent={"center"} alignItems={"center"} h="100%" onMouseEnter={(e) => setIsStudio(true)} onMouseLeave={(e) => setIsStudio(false)}>
                 {IsStudio && (
                   <VStack>
@@ -160,7 +160,7 @@ export function PublishCarousel() {
             </Box>
 
             {/* Third Carousel - Nikolas */}
-            <Box backgroundImage={`url(${Nikolas})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} mx={5} px={10} borderRadius={"10px"} className="hvr-grow">
+            <Box backgroundImage={`url(${Nikolas})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} m={5} px={"2xl"} borderRadius={"10px"} className="hvr-grow">
               <Flex justifyContent={"center"} alignItems={"center"} h="100%" onMouseEnter={(e) => setIsNikolas(true)} onMouseLeave={(e) => setIsNikolas(false)}>
                 {IsNikolas && (
                   <VStack>
@@ -174,7 +174,7 @@ export function PublishCarousel() {
             </Box>
 
             {/* Fourth Carousel -Model */}
-            <Box backgroundImage={`url(${Model})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} mx={5} px={10} borderRadius={"10px"} className="hvr-grow">
+            <Box backgroundImage={`url(${Model})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} m={5} px={"2xl"} borderRadius={"10px"} className="hvr-grow">
               <Flex justifyContent={"center"} alignItems={"center"} h="100%" onMouseEnter={(e) => setIsModel(true)} onMouseLeave={(e) => setIsModel(false)}>
                 {IsModel && (
                   <VStack>
@@ -188,7 +188,7 @@ export function PublishCarousel() {
             </Box>
 
             {/* Fifth Carousel - Artist */}
-            <Box backgroundImage={`url(${Artist})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} mx={5} px={10} borderRadius={"10px"} className="hvr-grow">
+            <Box backgroundImage={`url(${Artist})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} m={5} px={"2xl"} borderRadius={"10px"} className="hvr-grow">
               <Flex justifyContent={"center"} alignItems={"center"} h="100%" onMouseEnter={(e) => setIsArtist(true)} onMouseLeave={(e) => setIsArtist(false)}>
                 {IsArtist && (
                   <VStack>
@@ -202,7 +202,7 @@ export function PublishCarousel() {
             </Box>
 
             {/* Sixth Carousel - Example */}
-            <Box backgroundImage={`url(${Example})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} mx={5} px={10} borderRadius={"10px"} className="hvr-grow">
+            <Box backgroundImage={`url(${Example})`} backgroundSize="cover" backgroundRepeat={"no-repeat"} backgroundPosition={"center"} h="410px" w="100px" maxW={"420px"} m={5} px={"2xl"} borderRadius={"10px"} className="hvr-grow">
               <Flex justifyContent={"center"} alignItems={"center"} h="100%" onMouseEnter={(e) => setIsExample(true)} onMouseLeave={(e) => setIsExample(false)}>
                 {IsExample && (
                   <VStack>
