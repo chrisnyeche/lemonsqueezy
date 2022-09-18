@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Arrow } from "./Icons";
 import { Box, Container, Heading, Text, VStack, Button, Icon, Image, Flex } from "@chakra-ui/react";
 import "./Component.css";
-import { Arrow } from "./Icons";
 
 // Slick for Carousel
 import Slider from "react-slick";
@@ -87,7 +87,7 @@ export function PublishCarousel() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -121,7 +121,7 @@ export function PublishCarousel() {
             <Text color={"#9665da"} fontSize={"22px"} fontWeight={600} width={["70%", "70%", "50%"]} mx="auto"  data-aos="fade-up">
               Explore some live examples.
             </Text>
-            <Button color={"white"} bg={"#3c0483"} rounded={"full"} px={10} py={8} fontSize={20}  data-aos="fade-up">
+            <Button color={"white"} bg={"#3c0483"} rounded={"full"} px={10} py={8} fontSize={20}  data-aos="fade-up" _hover={{bg: "#3c0483"}}>
               Get Started
             </Button>
           </VStack>
@@ -165,6 +165,9 @@ export function PublishCarousel() {
                 {IsNikolas && (
                   <VStack>
                     <Arrow />
+                    <Heading as="h4" textAlign="center" color="white">
+                      Nikolas
+                    </Heading>
                   </VStack>
                 )}
               </Flex>
@@ -176,6 +179,9 @@ export function PublishCarousel() {
                 {IsModel && (
                   <VStack>
                     <Arrow />
+                    <Heading as="h4" textAlign="center" color="white">
+                      Emilia
+                    </Heading>
                   </VStack>
                 )}
               </Flex>
@@ -187,6 +193,9 @@ export function PublishCarousel() {
                 {IsArtist && (
                   <VStack>
                     <Arrow />
+                    <Heading as="h4" textAlign="center" color="white">
+                      Lowe
+                    </Heading>
                   </VStack>
                 )}
               </Flex>

@@ -17,7 +17,7 @@ function Hero() {
           </Box>
           {/* Nav Buttons */}
           <Box gap="2" ms="auto">
-            <Button variant={"ghost"} color="white">
+            <Button variant={"ghost"} color="white" _hover={{background: "transparent"}}>
               {" "}
               Login{" "}
             </Button>

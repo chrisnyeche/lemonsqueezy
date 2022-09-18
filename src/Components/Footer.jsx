@@ -1,16 +1,14 @@
 import { Box, Flex, Button, VStack, Icon, Text } from "@chakra-ui/react";
 import { MultipleArrows } from "./Icons";
 
-
 const Footer = () => {
+    const Buttons = ["Home", "Gallery", "Support", "Library", "Create new"]
     return (
         <Box bg="black" h="100%">
             <Flex as="ul" pt="70"  direction={{ base: "column", lg:"row"}} gap={22} color="white"justifyContent={"center"} alignContent={"center"}>
-                <Button variant={"ghost"} fontSize="18" _hover={{bg: "transparent"}}> Home </Button>
-                <Button variant={"ghost"} fontSize="18" _hover={{bg: "transparent"}}> Gallery </Button>
-                <Button variant={"ghost"} fontSize="18" _hover={{bg: "transparent"}}> Support </Button>
-                <Button variant={"ghost"} fontSize="18" _hover={{bg: "transparent"}}> Library </Button>
-                <Button variant={"ghost"} fontSize="18" _hover={{bg: "transparent"}}> Create new </Button>
+                {Buttons.map((eachButton) => {
+                return <Button key={eachButton} variant={"ghost"} fontSize="18" _hover={{bg: "transparent"}}> {eachButton} </Button>
+                })}
             </Flex>
 
             <VStack spacing={"5"} pt="110px" pb="100px" color="#99998f" fontWeight={500}>
