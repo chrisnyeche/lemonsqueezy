@@ -1,64 +1,41 @@
-import { Box, Icon, Text, Button, useColorModeValue, Heading, Container, SimpleGrid, VStack } from "@chakra-ui/react";
-import { Logo, MultipleArrows } from "./Icons";
-import "./Component.css";
+import { Stack, Flex, Box, Heading, Text, Button, Image } from "@chakra-ui/react";
+import HeroImage from "../Images/hero-img.png";
+import Navbar from "./Navbar";
 
-function Hero() {
+export default function Hero() {
   return (
-    <Box as="header" backgroundColor="#cdd5d7">
-
-        {/* Navigation */}
-      <Box className="header">
-        <SimpleGrid as="nav" columns={2} px={[1, 2, 7, 10]} py={4}>
-          <Box p="2" ms={{ lg: "auto" }}>
-            {/* Logo */}
-            <Heading>
-              <Icon as={Logo} />
-            </Heading>
-          </Box>
-          {/* Nav Buttons */}
-          <Box gap="2" ms="auto">
-            <Button variant={"ghost"} color="white" _hover={{background: "transparent"}}>
-              {" "}
-              Login{" "}
-            </Button>
-            <Button bg="#174d41" py="unset" px={[2, 3, 5]} color="#bef0df" fontSize={['12px', '16px', '16px']} _hover={{ bg: "#174d41", color: "#bef0df" }}>
-              Create new
-            </Button>
-          </Box>
-        </SimpleGrid>
-
-        {/* Hero */}
-        <Container maxW={"4xl"}>
-          <VStack as={Box} textAlign={"center"} spacing={5} py={{ base: 20, md: 36 }}>
-            <Heading as={"h1"} fontWeight={500} fontSize={{ base: "35px", sm: "4xl", md: "8xl" }} lineHeight={"110%"} width={["80%", "80%", "97%"]} color="white">
-              Bio site for creative minds.
-            </Heading>
-            <Text color={"rgb(220, 224, 230)"} fontSize={["20px", "24px","24px"]} width={["90%", "90%", "60%"]} mx="auto">
-              Build social media optimised profile page in minutes. Share your world with nano.site
+    <Box bg="#101A4D">
+        {/* Primary Navbar */}
+      <Navbar />
+      <Flex alignItems={"center"} justifyContent={"space-between"} direction={{ base: "column", md: "row" }}px={[2, 5, "65px"]} pb={[2, 5, "45px"]}>
+        {/* Hero Text */}
+        <Stack spacing={{ base: 5, md: 10 }} maxW={"4xl"}>
+          <Heading as="h1" lineHeight={1.1} fontWeight={700} fontSize={{ base: "5xl", sm: "5xl", lg: "73px" }}>
+            <Text as={"span"} color="#01FE87">
+              Re-Imagine{" "}
             </Text>
-            <Button
-              color={"#3e735e"}
-              bg={useColorModeValue("green.100", "green.500")}
-              rounded={"full"}
-              px={[4, 8, 10]}
-              py={35}
-              fontSize={20}
-              _hover={{
-                bg: useColorModeValue("green.100", "green.900"),
-              }}
-            >
-              Claim your free username
-            </Button>
+            <Text as={"span"} color={"white"}>
+              Africa.
+            </Text>
+          </Heading>
+          <Text color={"white"} fontSize="17px" lineHeight={"md"}>
+            At Renaissance Innovation Labs, we reimagine Africa in today’s world of rapid technological development. We find the smartest people, provide them with the right tools for success, and generate innovative solutions for individuals and industries.
+          </Text>
 
-            <Box position={"absolute"} bottom={{ base: "60px", md: "10px", lg: "70px"}} mx="auto" align="center">
-              <MultipleArrows />
-              <Text color={"rgb(220, 224, 230)"} fontSize={"17px"} fontWeight={"500"} m={5}>Create beautiful and efficient profile site and share your links with <br /> nano.site</Text>
-            </Box>
-          </VStack>
-        </Container>
-      </Box>
+          {/* Hero Buttons */}
+          <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: "column", sm: "row" }}>
+            <Button size={"lg"} fontWeight={"500"} px={"45px"} color={"#101A4D"} bg={"#01FE87"} _hover={{ bg: "#01FE87" }} w={"170px"}>
+              Get started
+            </Button>
+            <Button size={"lg"} fontWeight={"normal"} color="#01FE87" px={6} variant={"outline"} borderColor={"#01FE87"} w={"170px"} _hover={{background: "transparent"}}>
+              Learn More
+            </Button>
+          </Stack>
+        </Stack>
+        <Box>
+          <Image src={HeroImage} alt={"hero image"} />
+        </Box>
+      </Flex>
     </Box>
   );
 }
-
-export default Hero;

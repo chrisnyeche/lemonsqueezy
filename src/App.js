@@ -1,28 +1,17 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Footer from "./Components/Footer";
-import Hero from "./Components/Hero";
-import { Standout, BuildProfile, PublishCarousel, Reclaim, Support } from "./Components/Sections";
+import Header from "./Components/Header"
+import Hero from "./Components/Hero"
+import Features from "./Components/Features";
+import Testimonials from "./Components/Testimonials";
 
-const App = () => {
-  // AOS useEffect
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
-  
+function App() {
   return (
     <>
-      <Hero />
-      <Standout />
-      <BuildProfile />
-      <PublishCarousel />
-      <Reclaim />
-      <Support />
-      <Footer />
+    <Header/>
+    <Hero/>
+    <Features/>
+    <Testimonials/>
     </>
   );
-};
+}
 
 export default App;
