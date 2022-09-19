@@ -4,12 +4,12 @@ import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
-    <Box bg="#101A4D">
+    <Box bg="#101A4D" height={["fit-content", "fit-content", "100vh"]}>
         {/* Primary Navbar */}
       <Navbar />
-      <Flex alignItems={"center"} justifyContent={"space-between"} direction={{ base: "column", md: "row" }}px={[2, 5, "65px"]} pb={[2, 5, "45px"]}>
+      <Flex justifyContent={"space-between"} direction={{ base: "column", md: "row" }} px={[2, 5, "45px"]} pb={[2, 5, "45px"]}>
         {/* Hero Text */}
-        <Stack spacing={{ base: 5, md: 10 }} maxW={"4xl"}>
+        <Stack spacing={{ base: 5, md: 10 }} maxW={"3xl"} mt={'9'}>
           <Heading as="h1" lineHeight={1.1} fontWeight={700} fontSize={{ base: "5xl", sm: "5xl", lg: "73px" }}>
             <Text as={"span"} color="#01FE87">
               Re-Imagine{" "}
@@ -32,8 +32,10 @@ export default function Hero() {
             </Button>
           </Stack>
         </Stack>
+
+        {/* Hero Image */}
         <Box>
-          <Image src={HeroImage} alt={"hero image"} />
+          <Image src={HeroImage} alt={"hero image"} w="100%" />
         </Box>
       </Flex>
     </Box>

@@ -8,9 +8,9 @@ function Features() {
   return (
     <Box as="section" position="relative">
       {/* Renaissance  */}
-      <Box textAlign={["left", "center", "center"]} maxW={"930px"} mx={"auto"} p={[3, 10, 30]}>
+      <Box textAlign={["left", "center", "center"]} maxW={"930px"} mx={"auto"} p={[1, 10, 30]}>
         <Box className="features">
-          <Heading as={"h2"} fontSize={["26px", "4xl", "5xl"]} textAlign={"center"} fontWeight="500">
+          <Heading as={"h2"} fontSize={["3xl", "4xl", "5xl"]} textAlign={"center"} fontWeight="500" mt="9">
             Renaissance{" "}
             <Text as="span" fontWeight="400">
               Innovation Labs.
@@ -18,14 +18,13 @@ function Features() {
           </Heading>
         </Box>
 
-        <Box position="absolute" top={["3px", "34px", "34px"]} left={["20px", "90px", "90px", "100px"]} zIndex="-1" className="container"></Box>
-        <Text as="p" color="#73797f" fontSize="1rem" lineHeight="1.5rem" mt={["50px"]}>
+        <Text as="p" color="#73797f" fontSize="1rem" lineHeight="1.5rem" mt={[5, 9, "50px"]} p="2">
           The #1 innovative company in Africa, impacting at least 1000 lives annually by 2023. We engage diverse communities in open collaboration to create, elaborate, and prototype disruptive solutions.
         </Text>
       </Box>
 
       {/* Features 1 */}
-      <Box p={4} as="section">
+      <Box p={4} as="section" className="container-fluid">
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
           {/* Collabration */}
           <VStack textAlign={"center"} mx="auto" spacing={5}>
@@ -33,7 +32,7 @@ function Features() {
             <Heading as={"h3"} fontWeight={"400"}>
               Collaboration
             </Heading>
-            <Text fontSize={"18px"} maxW={"270px"}>
+            <Text fontSize={"16px"} maxW={"200px"}>
               {" "}
               Collaboration to create new models, products and services.
             </Text>
@@ -51,7 +50,7 @@ function Features() {
             <Heading as={"h3"} fontWeight={"400"}>
               Performance
             </Heading>
-            <Text fontSize={"18px"} maxW={"300px"}>
+            <Text fontSize={"16px"} maxW={"300px"}>
               {" "}
               High performance teams employing agile project delivery frameworks and methodologies.
             </Text>
@@ -86,23 +85,23 @@ function Features() {
       </Box>
 
       {/* Features 2 */}
-      <Box as="section" p={10}>
+      <Box as="section" p={[5, 8, 10]}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems={"center"}>
           {/* Impact Image */}
           <Box>
             <Image src={Impact} alt={"hero"} />
           </Box>
 
-          <Box spacing={10} >
+          <Box>
             {/* Impact Text */}
-            <Heading as={"h4"} fontWeight="400">
+            <Heading as={"h4"} fontWeight="400" fontSize={['2xl', "3xl", "4xl"]}>
             We are making impact across the globe!{" "}
-              <Text as={'h2'} fontWeight="700">
+              <Text as={'h2'} my="2" fontWeight="700" className="features">
               Check out our projects.
               </Text>
             </Heading>
             <Box zIndex={-1}>
-            <Brush/>
+            {/* <Brush/> */}
             </Box>
 
             <Text maxW={"400px"} fontSize="18px">

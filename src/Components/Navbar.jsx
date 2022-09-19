@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <Box>
       {/* Desktop Navbar */}
-      <Flex color={useColorModeValue("gray.600", "white")} minH={"60px"} py={{ base: 2, md: 4}} px={{ base: 4, md: 5, lg: 20}} borderBottom={1} align={"center"} justifyContent={"space-between"}>
+      <Flex color={useColorModeValue("gray.600", "white")} minH={"60px"} py={{ base: 2, md: 4}} px={{ base: 4, md: 5, lg: '9'}} borderBottom={1} align={"center"} justifyContent={"space-between"}>
         {/* Logo */}
         <Button as="a" href="" background="transparent" _hover={{background: "transparent"}}>
           <Icon as={Logo} />
