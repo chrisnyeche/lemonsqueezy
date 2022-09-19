@@ -1,3 +1,6 @@
+## OVERVIEW
+The site is hosted already in Netlify [RENAISSANCE](https://renaissance.ng.netlify.app/)
+
 ## Reachakra-UI
 Reachakra Ui is a combination of react and chakra template for building of websites and applications
 
