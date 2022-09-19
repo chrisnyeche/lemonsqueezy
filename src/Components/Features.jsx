@@ -1,5 +1,5 @@
 import { Box, Heading, SimpleGrid, Text, Button, Icon, VStack, Image } from "@chakra-ui/react";
-import { Brush, Collabration, Performance, Growth } from "./Images";
+import { Collabration, Performance, Growth } from "./Images";
 import Impact from "../Images/impact.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import "./Components.css";
@@ -24,7 +24,7 @@ function Features() {
       </Box>
 
       {/* Features 1 */}
-      <Box p={4} as="section" className="container-fluid">
+      <Box p={4} as="section">
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
           {/* Collabration */}
           <VStack textAlign={"center"} mx="auto" spacing={5}>
@@ -32,7 +32,7 @@ function Features() {
             <Heading as={"h3"} fontWeight={"400"}>
               Collaboration
             </Heading>
-            <Text fontSize={"16px"} maxW={"200px"}>
+            <Text fontSize={"18px"} maxW={"240px"}>
               {" "}
               Collaboration to create new models, products and services.
             </Text>
@@ -50,7 +50,7 @@ function Features() {
             <Heading as={"h3"} fontWeight={"400"}>
               Performance
             </Heading>
-            <Text fontSize={"16px"} maxW={"300px"}>
+            <Text fontSize={"18px"} maxW={"240px"}>
               {" "}
               High performance teams employing agile project delivery frameworks and methodologies.
             </Text>
@@ -68,7 +68,7 @@ function Features() {
             <Heading as={"h3"} fontWeight={"400"}>
               Growth
             </Heading>
-            <Text fontSize={"18px"} maxW={"290px"}>
+            <Text fontSize={"18px"} maxW={"240px"}>
               Rapid iteration ensures market successes and spin-off business units.
             </Text>
             <Button variant="ghost" fontSize={"lg"}>

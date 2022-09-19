@@ -22,7 +22,7 @@ export function Collabration() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="300"
+      width="250"
       height="127"
       viewBox="0 0 104 107"
     >
@@ -134,7 +134,7 @@ export function Growth() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="300"
+      width="250"
       height="127"
       viewBox="0 0 104 107"
     >
@@ -233,7 +233,7 @@ export function Performance() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="300"
+      width="250"
       height="127"
       viewBox="0 0 104 107"
     >

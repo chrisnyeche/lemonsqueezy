@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
-    <Box bg="#101A4D" height={["fit-content", "fit-content", "100vh"]}>
+    <Box bg="#101A4D" height={["fit-content"]}>
         {/* Primary Navbar */}
       <Navbar />
       <Flex justifyContent={"space-between"} direction={{ base: "column", md: "row" }} px={[2, 5, "45px"]} pb={[2, 5, "45px"]}>
