@@ -1,4 +1,4 @@
-import { Box, Heading, Image, SimpleGrid, Text, Icon, Button, Flex, VStack, Divider, HStack } from "@chakra-ui/react";
+import { Box, Heading, Image, SimpleGrid, Text, Icon, Button, Flex, VStack, Divider} from "@chakra-ui/react";
 import "./Components.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 

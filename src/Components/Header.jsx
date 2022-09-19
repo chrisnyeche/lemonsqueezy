@@ -2,7 +2,7 @@ import { Box, Flex, Button, HStack, InputLeftElement, Input, InputGroup, IconBut
 import React from "react";
 import { IoMdMail } from "react-icons/io";
 import { BsFillTelephoneFill, BsSearch } from "react-icons/bs";
-import { FaFacebookF, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Header() {
   const iconButtons = [
@@ -11,7 +11,7 @@ export default function Header() {
       href: "#",
     },
     {
-      icon: <FaLinkedin />,
+      icon: <FaLinkedinIn />,
       href: "#",
     },
     {
@@ -25,7 +25,7 @@ export default function Header() {
   ];
 
   return (
-    <Box display={{ base: "none", lg: "block" }}>
+    <Box display={{ base: "none", lg: "block" }} className="fixed-top" bg={"white"} shadow={"lg"}>
       <Box ps={9} py={2}>
         <Flex alignItems={"center"} justifyContent="space-between">
           {/* Email & Phone */}

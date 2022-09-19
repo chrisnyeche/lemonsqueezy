@@ -1,7 +1,7 @@
 import { Box, Container, Stack, SimpleGrid, Text, Link, VisuallyHidden, chakra, useColorModeValue, Icon, Button, Flex } from "@chakra-ui/react";
 
 // Icons
-import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import {MdLocationOn} from "react-icons/md"
@@ -22,15 +22,16 @@ const SocialButton = ({ children, label, href }) => {
     <chakra.button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
       rounded={"full"}
-      w={8}
-      h={8}
+      w={9}
+      h={9}
       cursor={"pointer"}
       as={"a"}
       href={href}
       display={"inline-flex"}
       alignItems={"center"}
+      border={"1px solid"}
+      borderColor={"#01FE87"}
       justifyContent={"center"}
-      transition={"background 0.3s ease"}
       _hover={{
         bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       }}
@@ -102,15 +103,18 @@ export default function Footer() {
       <Box borderTopWidth={2} w={"90%"} mx="auto" borderStyle={"solid"} borderColor={useColorModeValue("gray.600", "gray.800")}>
         <Container as={Stack} maxW={"8xl"} py={4} direction={{ base: "column", md: "row" }} spacing={4} justify={{ md: "space-between" }} align={{ md: "center" }}>
           <Text fontSize={"12px"}>© Copyright, Renaissance Innovation Labs 2021</Text>
-          <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"} href={"#"} _hover={{ color: "white" }}>
-              <FaTwitter />
+          <Stack direction={"row"} spacing={3}>
+          <SocialButton label={"YouTube"} href={"#"} _hover={{ color: "#01FE87" }}>
+              <FaFacebookF color="#01FE87" fontSize={"18px"} />
             </SocialButton>
-            <SocialButton label={"YouTube"} href={"#"} _hover={{ color: "white" }}>
-              <FaYoutube />
+            <SocialButton label={"YouTube"}  href={"#"} _hover={{ color: "#01FE87" }}>
+              <FaLinkedinIn color="#01FE87" fontSize={"18px"}  />
             </SocialButton>
-            <SocialButton label={"Instagram"} href={"#"} _hover={{ color: "white" }}>
-              <FaInstagram />
+            <SocialButton label={"Instagram"} href={"#"} _hover={{ color: "#01FE87" }}>
+              <FaInstagram color="#01FE87" fontSize={"18px"}  />
+            </SocialButton>
+            <SocialButton label={"Twitter"} href={"#"} _hover={{ color: "#01FE87" }} >
+              <FaTwitter color="#01FE87" fontSize={"18px"}  />
             </SocialButton>
           </Stack>
         </Container>
