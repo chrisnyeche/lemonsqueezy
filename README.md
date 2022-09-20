@@ -17,8 +17,8 @@ git add .
 git commit -m "first commit"
 git remote set-url origin https://github.com/chrisdesignsofficial/lemonsqueezy.git
 git branch -M main
-git pull -u origin main
-git push -u origin main
+git pull origin main
+git push origin main
 
 To view locally:
 In the project directory, you can run:
