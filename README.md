@@ -1,5 +1,5 @@
-## OVERVIEW
-The site is hosted already in Netlify [RENAISSANCE](https://renaissance.ng.netlify.app/)
+## Overview
+
 
 ## Reachakra-UI
 Reachakra Ui is a combination of react and chakra template for building of websites and applications
@@ -12,10 +12,12 @@ After cloning, you run the following commands for git
 STEPS:
 ** Create your project Repo. [Do not add README file]
 ** Clone the Reachakra Ui Repo and run the commands below:
+git init
 git add .
 git commit -m "first commit"
-git remote set-url origin https://github.com/chrisdesignsofficial/newrepo.git
+git remote set-url origin https://github.com/chrisdesignsofficial/lemonsqueezy.git
 git branch -M main
+git pull -u origin main
 git push -u origin main
 
 To view locally:
