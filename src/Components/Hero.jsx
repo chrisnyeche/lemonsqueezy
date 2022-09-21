@@ -1,43 +1,150 @@
-import { Stack, Flex, Box, Heading, Text, Button, Image } from "@chakra-ui/react";
-import HeroImage from "../Images/hero-img.png";
-import Navbar from "./Navbar";
+import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Center } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon} from "@chakra-ui/icons";
+import Logo from "../Images/logo.png";
 
-export default function Hero() {
+const linkHoverColor = "#F56565";
+
+export default function NavBar( {b}) {
+  const { isOpen, onToggle } = useDisclosure();
   return (
-    <Box bg="#101A4D" height={["fit-content"]} mt={{lg: "50px"}}>
-        {/* Primary Navbar */}
-      <Navbar />
-      <Flex justifyContent={"space-between"} direction={{ base: "column", md: "row" }} px={[2, 5, "45px"]} pb={[2, 5, "45px"]}>
-        {/* Hero Text */}
-        <Stack spacing={{ base: 5, md: 10 }} maxW={"3xl"} mt={'9'}>
-          <Heading as="h1" lineHeight={1.1} fontWeight={700} fontSize={{ base: "5xl", sm: "5xl", lg: "73px" }}>
-            <Text as={"span"} color="#01FE87">
-              Re-Imagine{" "}
-            </Text>
-            <Text as={"span"} color={"white"}>
-              Africa.
-            </Text>
-          </Heading>
-          <Text color={"white"} fontSize="17px" lineHeight={"md"}>
-            At Renaissance Innovation Labs, we reimagine Africa in today’s world of rapid technological development. We find the smartest people, provide them with the right tools for success, and generate innovative solutions for individuals and industries.
-          </Text>
+    <Center my="15px" mx={["15px", "20px", "30px"]}>
+    <Box w="100%">
+      <Flex bg={useColorModeValue("white", "gray.800")} color={useColorModeValue("gray.600", "white")} minH={"60px"} py={{ base: 2 }} px={{ base: 4 }} borderStyle={"solid"} borderColor={useColorModeValue("gray.200", "gray.900")} alignItems={"center"}>
+        <Flex flex={{ base: 1 }}>
 
-          {/* Hero Buttons */}
-          <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: "column", sm: "row" }}>
-            <Button size={"lg"} fontWeight={"500"} px={"45px"} color={"#101A4D"} bg={"#01FE87"} _hover={{ bg: "#01FE87" }} w={"170px"}>
-              Get started
-            </Button>
-            <Button size={"lg"} fontWeight={"normal"} color="#01FE87" px={6} variant={"outline"} borderColor={"#01FE87"} w={"170px"} _hover={{background: "transparent"}}>
-              Learn More
-            </Button>
-          </Stack>
+          {/* Logo */}
+          <Button variant={"ghost"} textAlign={useBreakpointValue({ base: "center", md: "left" })} color={useColorModeValue("gray.800", "white")} _hover={{ bg: "transparent" }}>
+            <img src={Logo} alt="logo" />
+          </Button>
+
+          {/* Desktop Navbar */}
+          <Flex display={{ base: "none", md: "flex" }} ml={1} alignItems={"center"}>
+            <DesktopNav />
+          </Flex>
+        </Flex>
+
+        <Stack flex={{ base: 1, md: 0 }} justify={"flex-end"} direction={"row"} spacing={4}>
+          <Flex flex={{ base: "end", md: "auto" }} ml={{ base: -2 }} display={{ base: "flex", md: "none" }} ps="3">
+            {/* Hamburger */}
+            <IconButton onClick={onToggle} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} variant={"ghost"} aria-label={"Toggle Navigation"} />
+          </Flex>
+
+          {/* Sign in  */}
+          <Button as={"a"} fontSize={"sm"} fontWeight={400} variant={"ghost"} href={"#"} _hover={{ color: linkHoverColor }}>
+            Sign In
+          </Button>
+
+          {/* Get Started */}
+          <Button
+            display={{ base: "none", md: "inline-flex" }}
+            fontSize={"sm"}
+            fontWeight={600}
+            color={"white"}
+            bg="red.400"
+            href={"#"}
+            _hover={{
+              bg: "red.500",
+            }}
+          >
+            Get Started
+          </Button>
         </Stack>
-
-        {/* Hero Image */}
-        <Box>
-          <Image src={HeroImage} alt={"hero image"} w="100%" />
-        </Box>
       </Flex>
+
+      <Collapse in={isOpen} animateOpacity>
+        <MobileNav />
+      </Collapse>
     </Box>
+    </Center>
   );
 }
+
+const DesktopNav = () => {
+  const linkColor = useColorModeValue("gray.600", "gray.200");
+
+  return (
+    <Stack direction={"row"} spacing={4}>
+      {NAV_ITEMS.map((navItem) => (
+        <Box key={navItem.label}>
+          <Popover trigger={"hover"} placement={"bottom-start"}>
+            <PopoverTrigger>
+              <Link
+                p={2}
+                href={navItem.href ?? "#"}
+                fontSize={"sm"}
+                fontWeight={500}
+                color={linkColor}
+                _hover={{
+                  textDecoration: "none",
+                  color: linkHoverColor,
+                }}
+              >
+                {navItem.label}
+              </Link>
+            </PopoverTrigger>
+          </Popover>
+        </Box>
+      ))}
+    </Stack>
+  );
+};
+
+const MobileNav = () => {
+  return (
+    <Stack bg={useColorModeValue("white", "gray.800")} p={4} display={{ md: "none" }}>
+      {NAV_ITEMS.map((navItem) => (
+        <MobileNavItem key={navItem.label} {...navItem} />
+      ))}
+    </Stack>
+  );
+};
+
+const MobileNavItem = ({ label, children, href }) => {
+  const { isOpen, onToggle } = useDisclosure();
+
+  return (
+    <Stack spacing={4} onClick={children && onToggle}>
+      <Flex
+        py={2}
+        as={Link}
+        href={href ?? "#"}
+        justify={"space-between"}
+        align={"center"}
+        _hover={{
+          textDecoration: "none",
+        }}
+      >
+        <Text fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
+          {label}
+        </Text>
+        {children && <Icon as={ChevronDownIcon} _focus={{ color: "#f56565" }} _hover={{ color: "#f56565" }} transition={"all .25s ease-in-out"} transform={isOpen ? "rotate(180deg)" : ""} w={6} h={6} />}
+      </Flex>
+
+      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
+        <Stack mt={2} pl={4} borderLeft={1} borderStyle={"solid"} borderColor={useColorModeValue("gray.200", "gray.700")} align={"start"}>
+          {children &&
+            children.map((child) => (
+              <Link key={child.label} py={2} href={child.href}>
+                {child.label}
+              </Link>
+            ))}
+        </Stack>
+      </Collapse>
+    </Stack>
+  );
+};
+
+const NAV_ITEMS = [
+  {
+    label: "Pricing",
+    href: "#",
+  },
+  {
+    label: "Blog",
+    href: "#",
+  },
+  {
+    label: "@lmsqueezy",
+    href: "#",
+  },
+];
