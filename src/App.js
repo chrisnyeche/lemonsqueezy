@@ -1,8 +1,8 @@
-import Hero from "./Components/Hero"
 import '@fontsource/inter/500.css'
+import Hero from "./Components/Hero"
 import Features from "./Components/Features";
-import Testimonials from "./Components/Testimonials";
-import Footer from "./Components/Footer";
+// import Testimonials from "./Components/Testimonials";
+// import Footer from "./Components/Footer";
 import { Box } from "@chakra-ui/react";
 
 const color = "#55555b"
@@ -13,6 +13,7 @@ function App() {
   return (
     <Box color={color}>
     <Hero buttonColor={buttonColor}/>
+    <Features/>
     </Box>
   );
 }

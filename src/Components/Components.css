@@ -1,6 +1,56 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.semicirclepink,
+.semicirclepurple {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 150px 150px 0 0;
+}
+
+.semicirclepink {
+  height: 50px;
+  width: 90px;
+  top: 40%;
+  left: 90%;
+  transform: rotate(90deg);
+}
+
+.semicirclepurple {
+  height: 55px;
+  width: 110px;
+  top: 67%;
+  left: 47%;
+  transform: rotate(180deg);
+}
+
+.circle{
+    height: 650px;
+    width: 650px;
+    border-radius: 50%;
+}
+
+
+/* For Floating Animation */
+.floating {
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
