@@ -1,17 +1,82 @@
-import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Center } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ChevronDownIcon} from "@chakra-ui/icons";
+import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, useColorModeValue, useBreakpointValue, useDisclosure, Center, Image, Heading, VStack } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
+
+// Images
+import HeroGirl from "../Images/hero-girl-drop.jpg";
 import Logo from "../Images/logo.png";
 
-const linkHoverColor = "#F56565";
+// Icons
+import YelloCircle from "../Icons/yellocircle.svg";
+import RedCircle from "../Icons/redcircle.svg";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
-export default function NavBar( {b}) {
+const linkHoverColor = "#7148eb";
+const buttonColor = "#7148eb";
+
+export default function Hero() {
+  return (
+    <Box h={"145vh"} backgroundImage={`url(${HeroGirl})`} backgroundSize="66%" backgroundPosition={"140% 101%"} backgroundRepeat={"no-repeat"} position="relative">
+      <Box py="10px" mb="15px" mx={["15px", "20px", "35px"]}>
+        <NavBar />
+
+        <Box gap={"14px"}>
+          <Heading as="h1" maxW={"550px"} fontSize={["32px", "64px"]} lineHeight={"72px"} mt={["30px", "50px", "150px"]}>
+            Sell digital products the easy-peasy way
+          </Heading>
+          <Text fontSize={"18px"} lineHeight="32px" maxW={"550px"}>
+            {" "}
+            Selling digital downloads, subscriptions, and software licenses has never been easier, faster, or more secure.
+          </Text>
+          {/* Get Started */}
+          <Button
+            fontSize={"sm"}
+            fontWeight={600}
+            color={"white"}
+            borderRadius={"18px"}
+            bg={buttonColor}
+            rightIcon={AiOutlineArrowRight}
+            href={"#"}
+            _hover={{
+              bg: { linkHoverColor },
+            }}
+          >
+            Get Started
+          </Button>
+        </Box>
+
+        {/* Yellow Circle */}
+        <Image src={YelloCircle} alt={"Yellow circle ball"} position="absolute" left={"50%"} top="20%" display={{ base: "none", md: "block" }} />
+
+        {/* Red Circle */}
+        <Image src={RedCircle} alt={"Red circle ball"} position="absolute" left={"68%"} top="50%" display={{ base: "none", md: "inline-block" }} />
+      </Box>
+    </Box>
+  );
+}
+
+// Nav Items
+const NAV_ITEMS = [
+  {
+    label: "Pricing",
+    href: "#",
+  },
+  {
+    label: "Blog",
+    href: "#",
+  },
+  {
+    label: "@lmsqueezy",
+    href: "#",
+  },
+];
+
+// Complete Navbar
+function NavBar({ b }) {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <Center my="15px" mx={["15px", "20px", "30px"]}>
     <Box w="100%">
-      <Flex bg={useColorModeValue("white", "gray.800")} color={useColorModeValue("gray.600", "white")} minH={"60px"} py={{ base: 2 }} px={{ base: 4 }} borderStyle={"solid"} borderColor={useColorModeValue("gray.200", "gray.900")} alignItems={"center"}>
+      <Flex minH={"60px"} py={{ base: 2 }} px={{ base: 4 }} borderStyle={"solid"} borderColor={useColorModeValue("gray.200", "gray.900")} alignItems={"center"}>
         <Flex flex={{ base: 1 }}>
-
           {/* Logo */}
           <Button variant={"ghost"} textAlign={useBreakpointValue({ base: "center", md: "left" })} color={useColorModeValue("gray.800", "white")} _hover={{ bg: "transparent" }}>
             <img src={Logo} alt="logo" />
@@ -30,20 +95,21 @@ export default function NavBar( {b}) {
           </Flex>
 
           {/* Sign in  */}
-          <Button as={"a"} fontSize={"sm"} fontWeight={400} variant={"ghost"} href={"#"} _hover={{ color: linkHoverColor }}>
+          <Button as={"a"} display={{ base: "none", md: "inline-flex" }} fontSize={"sm"} fontWeight={400} variant={"solid"} borderRadius="27px" bg="white" href={"#"} _hover={{ color: linkHoverColor }}>
             Sign In
           </Button>
 
           {/* Get Started */}
           <Button
-            display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg="red.400"
+            borderRadius={"18px"}
+            bg={buttonColor}
+            rightIcon={AiOutlineArrowRight}
             href={"#"}
             _hover={{
-              bg: "red.500",
+              bg: { linkHoverColor },
             }}
           >
             Get Started
@@ -55,7 +121,6 @@ export default function NavBar( {b}) {
         <MobileNav />
       </Collapse>
     </Box>
-    </Center>
   );
 }
 
@@ -133,18 +198,3 @@ const MobileNavItem = ({ label, children, href }) => {
     </Stack>
   );
 };
-
-const NAV_ITEMS = [
-  {
-    label: "Pricing",
-    href: "#",
-  },
-  {
-    label: "Blog",
-    href: "#",
-  },
-  {
-    label: "@lmsqueezy",
-    href: "#",
-  },
-];
