@@ -14,7 +14,7 @@ export default function Features() {
   return (
     <Box as="section" h={"147vh"} overflow="hidden" position="relative">
       {/* Purple Box */}
-      <Box className="circle" bg={"#35389D"} position="absolute" left={"-240px"} zIndex={"-1"} top={"13%"} />
+      <Box height={["200px", "350px", "650px"]} width={["200px", "350px", "650px"]} border-radius="50%" bg={"#35389D"} position="absolute" left={"-240px"} zIndex={"-1"} top={"13%"} />
 
       {/* Pink Circle */}
       <Box className="circle floating" bg={"#F53D6B"} position="absolute" right={"-210px"} top={"40%"} zIndex={"-1"} />
