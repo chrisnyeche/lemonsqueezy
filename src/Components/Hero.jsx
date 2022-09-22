@@ -1,49 +1,120 @@
-import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure} from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon} from "@chakra-ui/icons";
-import Logo from "../Icons/logo.png"
+import { Box, Flex, Text, IconButton, Button, Stack, Collapse, Icon, Link, Popover, PopoverTrigger, useColorModeValue, useBreakpointValue, useDisclosure, Center, Image, Heading, VStack } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
-const linkHoverColor = "#F56565";
+// Images
+import HeroGirl from "../Images/hero-girl-drop.jpg";
+import Logo from "../Images/logo.png";
 
+// Icons
+import YelloCircle from "../Icons/yellocircle.svg";
+import RedCircle from "../Icons/redcircle.svg";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
+const linkHoverColor = "#7148eb";
+const buttonColor = "#7148eb";
 
-export default function NavBar() {
+export default function Hero() {
+  return (
+    <Box h={"145vh"} backgroundImage={`url(${HeroGirl})`} backgroundSize="66%" backgroundPosition={"140% 101%"} backgroundRepeat={"no-repeat"} position="relative">
+      <Box py="10px" mb="15px" mx={["15px", "20px", "35px"]}>
+        <NavBar />
+
+        <Box gap={"14px"}>
+          <Heading as="h1" maxW={"550px"} fontSize={["32px", "64px"]} lineHeight={"72px"} mt={["30px", "50px", "150px"]}>
+            Sell digital products the easy-peasy way
+          </Heading>
+          <Text fontSize={"18px"} lineHeight="32px" maxW={"550px"}>
+            {" "}
+            Selling digital downloads, subscriptions, and software licenses has never been easier, faster, or more secure.
+          </Text>
+          {/* Get Started */}
+          <Button
+            fontSize={"sm"}
+            fontWeight={600}
+            color={"white"}
+            borderRadius={"18px"}
+            bg={buttonColor}
+            rightIcon={AiOutlineArrowRight}
+            href={"#"}
+            _hover={{
+              bg: { linkHoverColor },
+            }}
+          >
+            Get Started
+          </Button>
+        </Box>
+
+        {/* Yellow Circle */}
+        <Image src={YelloCircle} alt={"Yellow circle ball"} position="absolute" left={"50%"} top="20%" display={{ base: "none", md: "block" }} />
+
+        {/* Red Circle */}
+        <Image src={RedCircle} alt={"Red circle ball"} position="absolute" left={"68%"} top="50%" display={{ base: "none", md: "inline-block" }} />
+      </Box>
+    </Box>
+  );
+}
+
+// Nav Items
+const NAV_ITEMS = [
+  {
+    label: "Pricing",
+    href: "#",
+  },
+  {
+    label: "Blog",
+    href: "#",
+  },
+  {
+    label: "@lmsqueezy",
+    href: "#",
+  },
+];
+
+// Complete Navbar
+function NavBar({ b }) {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <Box position={"fixed"} w="100%"zIndex={"1"}>
-      <Flex bg={useColorModeValue("white", "gray.800")} color={useColorModeValue("gray.600", "white")} minH={"60px"} py={{ base: 2 }} px={{ base: 4 }} borderStyle={"solid"} borderColor={useColorModeValue("gray.200", "gray.900")} alignItems={"center"} justifyContent={"space-between"}>
+    <Box w="100%">
+      <Flex minH={"60px"} py={{ base: 2 }} px={{ base: 4 }} borderStyle={"solid"} borderColor={useColorModeValue("gray.200", "gray.900")} alignItems={"center"}>
         <Flex flex={{ base: 1 }}>
-          <Button variant={"ghost"} textAlign={useBreakpointValue({ base: "center", md: "left" })} color={useColorModeValue("gray.800", "white")} _hover={{ bg: "transparent"}}>
-            <img src={Logo} alt="logo" width={40}/>
+          {/* Logo */}
+          <Button variant={"ghost"} textAlign={useBreakpointValue({ base: "center", md: "left" })} color={useColorModeValue("gray.800", "white")} _hover={{ bg: "transparent" }}>
+            <img src={Logo} alt="logo" />
           </Button>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10} alignItems={"center"}>
+          {/* Desktop Navbar */}
+          <Flex display={{ base: "none", md: "flex" }} ml={1} alignItems={"center"}>
             <DesktopNav />
           </Flex>
         </Flex>
 
         <Stack flex={{ base: 1, md: 0 }} justify={"flex-end"} direction={"row"} spacing={4}>
-          <Button as={"a"} fontSize={"sm"} fontWeight={400} variant={"ghost"} href={"#"} _hover={{color: linkHoverColor}}>
+          <Flex flex={{ base: "end", md: "auto" }} ml={{ base: -2 }} display={{ base: "flex", md: "none" }} ps="3">
+            {/* Hamburger */}
+            <IconButton onClick={onToggle} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} variant={"ghost"} aria-label={"Toggle Navigation"} />
+          </Flex>
+
+          {/* Sign in  */}
+          <Button as={"a"} display={{ base: "none", md: "inline-flex" }} fontSize={"sm"} fontWeight={400} variant={"solid"} borderRadius="27px" bg="white" href={"#"} _hover={{ color: linkHoverColor }}>
             Sign In
           </Button>
 
+          {/* Get Started */}
           <Button
-            display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg="red.400"
+            borderRadius={"18px"}
+            bg={buttonColor}
+            rightIcon={AiOutlineArrowRight}
             href={"#"}
             _hover={{
-              bg: "red.500",
+              bg: { linkHoverColor },
             }}
           >
             Get Started
           </Button>
         </Stack>
-
-        <Flex flex={{ base: "end", md: "auto" }} ml={{ base: -2 }} display={{ base: "flex", md: "none" }} ps="3">
-          <IconButton onClick={onToggle} icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />} variant={"ghost"} aria-label={"Toggle Navigation"} />
-        </Flex>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -55,7 +126,6 @@ export default function NavBar() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
     <Stack direction={"row"} spacing={4}>
@@ -77,38 +147,10 @@ const DesktopNav = () => {
                 {navItem.label}
               </Link>
             </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent border={0} boxShadow={"xl"} bg={popoverContentBgColor} p={4} rounded={"xl"} minW={"sm"}>
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
           </Popover>
         </Box>
       ))}
     </Stack>
-  );
-};
-
-const DesktopSubNav = ({ label, href, subLabel }) => {
-  return (
-    <Link href={href} role={"group"} display={"block"} p={2} rounded={"md"} _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}>
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text transition={"all .3s ease"} _groupHover={{ color: "pink.400" }} fontWeight={500}>
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
-        </Box>
-        <Flex transition={"all .3s ease"} transform={"translateX(-10px)"} opacity={0} _groupHover={{ opacity: "100%", transform: "translateX(0)" }} justify={"flex-end"} align={"center"} flex={1}>
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
   );
 };
 
@@ -140,7 +182,7 @@ const MobileNavItem = ({ label, children, href }) => {
         <Text fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
           {label}
         </Text>
-        {children && <Icon as={ChevronDownIcon} _focus={{ color: "#f56565"}} _hover={{ color: "#f56565"}} transition={"all .25s ease-in-out"} transform={isOpen ? "rotate(180deg)" : ""} w={6} h={6} />}
+        {children && <Icon as={ChevronDownIcon} _focus={{ color: "#f56565" }} _hover={{ color: "#f56565" }} transition={"all .25s ease-in-out"} transform={isOpen ? "rotate(180deg)" : ""} w={6} h={6} />}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
@@ -156,18 +198,3 @@ const MobileNavItem = ({ label, children, href }) => {
     </Stack>
   );
 };
-
-const NAV_ITEMS = [
-  {
-    label: "Design",
-    href: "#",
-  },
-  {
-    label: "Programming",
-    href: "#",
-  },
-  {
-    label: "Design",
-    href: "#",
-  },
-];
