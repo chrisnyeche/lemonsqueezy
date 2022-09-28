@@ -11,7 +11,7 @@ const buttonColor = "#7148eb"
 
 function App() {
   return (
-    <Box color={color}>
+    <Box as="main" color={color}>
     <Hero buttonColor={buttonColor}/>
     <Features/>
     </Box>

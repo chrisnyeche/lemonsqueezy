@@ -58,3 +58,6 @@
   transform: rotate(270deg);
 }
 
+.rotate2{
+  transform: rotate(360deg);
+}
