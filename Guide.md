@@ -43,4 +43,6 @@ IV. Import font and weight to App.js
   }
 }
 
-
+**NUMBER THREE: How to make zINDEX**
+I. The mother box must have a fixed height
+II. All the children must have position absolute, if they will overlap

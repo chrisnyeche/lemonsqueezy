@@ -8,7 +8,6 @@ import "./Components.css";
 import Logo from "../Images/logo.png";
 import HeroGirl from "../Images/hero-girl-drop.jpg";
 import HeroGirlMobile from "../Images/hero-girl-drop-mobile.jpg";
-import Mike from "../Images/avatar-mike.jpg";
 
 // Icons
 import YelloCircle from "../Icons/yellocircle.svg";
@@ -23,7 +22,7 @@ const buttonColor = "#7148eb";
 export default function Hero() {
   return (
     <Box h={{base: "147vh", md: "167vh", lg: "147vh"}} backgroundImage={{base: `url(${HeroGirlMobile})`, lg: `url(${HeroGirl})`}} backgroundSize={{base: "110%", md: "107%", lg: "57%"}} backgroundPosition={{base: "-150% 100% ", md: "-220% 390px",  lg: "113% 125%"}} backgroundRepeat={"no-repeat"} position="relative" px={{ lg: "36"}}>
-      <Box py="15px" mb="15px" mx={["15px", "10px", "35px"]}>
+      <Box  mx={["15px", "10px", "35px"]}>
         <NavBar />
 
         <Box>
@@ -57,7 +56,7 @@ export default function Hero() {
           </Text>
 
           <Flex gap={5} display={{base: "none", md: "flex"}}>
-            <Image src={Mike} alt={"Mike Image"} rounded="full" w={"60px"} />
+            <Image src={"https://www.lemonsqueezy.com/wp-content/themes/lemonsqueezy/images/avatar-mike.jpg?version=1.8.1"} alt={"Mike Image"} rounded="full" w={"60px"} />
             <Box>
               <Text fontSize={"14px"} lineHeight="26px">
                 Mike McAlister

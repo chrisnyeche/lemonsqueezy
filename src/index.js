@@ -6,6 +6,10 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
+// Slick Carousel
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // Animate on scroll
 import "aos/dist/aos.css";
 

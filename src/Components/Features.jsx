@@ -64,7 +64,7 @@ export default function Features() {
 // Store Features
 function Store() {
   return (
-    <Box as="section" h={{ lg: "167vh" }} position="relative" overflow={"hidden"}>
+    <Box as="section" h={{ lg: "160vh" }} position="relative" overflow={"hidden"} >
 
       {/* Purple Box */}
       <Box height={["200px", "500px", "650px"]} width={["200px", "500px", "650px"]} border-radius="50%" bg={"#35389D"} position="absolute" left={"-240px"} zIndex={"-1"} top={"13%"} rounded="full" display={{ base: "none", lg: "block" }} />
@@ -108,7 +108,7 @@ function Store() {
 function Products1() {
   return (
     <>
-      <Flex flexDirection={{ base: "column", md: "row" }} alignItems={"center"} h={"fit-content"} gap={{ md: "30px", lg: "65px" }} mt="20px" p={2}>
+      <Flex flexDirection={{ base: "column", md: "row" }} alignItems={"center"} h={"fit-content"} gap={{ md: "30px", lg: "65px" }} mt={{base: "20px", md: "0px"}} p={{base: 2, md: "0px"}} >
         {/* Balloon */}
         <Box as="section" position="relative" h={{ base: "fit-content", md: "150vh" }} w={{ base: "100%", lg: "50%" }}>
           {/* Balloon Blue Ellipse" */}
