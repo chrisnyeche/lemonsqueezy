@@ -64,7 +64,8 @@ export default function Features() {
 // Store Features
 function Store() {
   return (
-    <Box as="section" h={{ lg: "147vh" }} position="relative" overflow={"hidden"}>
+    <Box as="section" h={{ lg: "167vh" }} position="relative" overflow={"hidden"}>
+
       {/* Purple Box */}
       <Box height={["200px", "500px", "650px"]} width={["200px", "500px", "650px"]} border-radius="50%" bg={"#35389D"} position="absolute" left={"-240px"} zIndex={"-1"} top={"13%"} rounded="full" display={{ base: "none", lg: "block" }} />
 
@@ -82,7 +83,7 @@ function Store() {
       </Box>
 
       {/* Green Circle */}
-      <Box className="circle" bg={"#2DCA72"} height={"120px"} width={"120px"} position="absolute" left={"12%"} zIndex={"3"} top={"42%"} rounded="full" display={{ base: "none", lg: "block" }} />
+      <Box h="650px" w="650px" bg={"#2DCA72"} height={"120px"} width={"120px"} position="absolute" left={"12%"} zIndex={"3"} top={"42%"} rounded="full" display={{ base: "none", lg: "block" }} />
 
       {/* Feature Store arena image */}
       <Center flexDirection={"column"}>
@@ -116,7 +117,7 @@ function Products1() {
           </Box>
 
           {/* Checkout */}
-          <Image src={CheckOut} alt={"Checkout image"} zIndex={"1"} w={{ base: "90%", md: "90%", lg: "50%" }} borderRadius="15px" top={{ base: "10px", md: "50px", lg: "260px" }} position={{ md: "absolute" }} left={{ base: "10px", lg: "220px" }} shadow={{ base: "lg", md: "2xl" }} mx="auto" my={3} />
+          <Image src={CheckOut} alt={"Checkout image"} zIndex={"1"} w={{ base: "90%", md: "90%", lg: "55%" }} borderRadius="15px" top={{ base: "10px", md: "50px", lg: "260px" }} position={{ md: "absolute" }} left={{ base: "10px", lg: "220px" }} shadow={{ base: "lg", md: "2xl" }} mx="auto" my={3} />
 
           {/* Yellow Circle */}
           <Box className="floating" border-radius="50%" bg={"#FEC133"} height={"80px"} width={"80px"} position="absolute" left={"180px"} zIndex={"3"} top={{ lg: "550px" }} rounded="full" display={{ base: "none", lg: "block" }} />
@@ -140,7 +141,7 @@ function Products1() {
           {/* Flex */}
           <Flex gap={5} my={"66px"} flexDirection={{ base: "column", lg: "row" }}>
             <Box>
-              <Image src={Dash} />
+              <Image src={Dash} alt={"Dash Icon"} />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Sell your anywhere
               </Heading>
@@ -149,7 +150,7 @@ function Products1() {
               </Text>
             </Box>
             <Box>
-              <Image src={Pointer} />
+              <Image src={Pointer} alt={"Pointer Icon"}  />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Sell your anywhere
               </Heading>
@@ -160,7 +161,7 @@ function Products1() {
           </Flex>
           <Flex gap={5} my={"66px"} flexDirection={{ base: "column", lg: "row" }}>
             <Box>
-              <Image src={ClouDrop} />
+              <Image src={ClouDrop} alt={"Cloud drop Icon"} />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Sell your anywhere
               </Heading>
@@ -169,7 +170,7 @@ function Products1() {
               </Text>
             </Box>
             <Box>
-              <Image src={Refresh} />
+              <Image src={Refresh} alt={"Refresh Icon"}  />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Sell your anywhere
               </Heading>
@@ -221,7 +222,7 @@ function Products2() {
           {/* Flex Items 1 */}
           <Flex gap={5} my={"66px"} flexDirection={{ base: "column", lg: "row" }}>
             <Box>
-              <Image src={Console} />
+              <Image src={Console} alt={"Console Icon"} />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Bundles & Upsells
               </Heading>
@@ -230,7 +231,7 @@ function Products2() {
               </Text>
             </Box>
             <Box>
-              <Image src={EmailIcon} />
+              <Image src={EmailIcon} alt={"Email Icon"}  />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Email marketing
               </Heading>
@@ -243,7 +244,7 @@ function Products2() {
           {/* Flex Items 2 */}
           <Flex gap={5} my={"66px"} flexDirection={{ base: "column", lg: "row" }}>
             <Box>
-              <Image src={Divide} />
+              <Image src={Divide} alt={"Divider Icon"} />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Discount codes
               </Heading>
@@ -252,7 +253,7 @@ function Products2() {
               </Text>
             </Box>
             <Box>
-              <Image src={Magnet} />
+              <Image src={Magnet} alt={"Magnet Icon"}  />
               <Heading as={"h6"} fontSize="xl" color="#25252D" my={3}>
                 Lead magnets
               </Heading>
@@ -355,7 +356,7 @@ function Products4() {
     <>
       <Flex flexDirection={{ base: "column", md: "row-reverse" }} alignItems={"center"} h={"fit-content"} gap={{ md: "30px", lg: "65px" }} mt="20px" p={{ base: 2, md: 0 }}>
         {/* Balloon */}
-        <Box as="section" position="relative" h={{ base: "fit-content", md: "150vh", lg: "170vh" }} w={{ base: "100%", lg: "50%" }} overflow="hidden">
+        <Box as="section" position="relative" h={{ base: "fit-content", md: "150vh", lg: "173vh" }} w={{ base: "100%", lg: "50%" }} overflow="hidden">
           {/* Balloon Pink Ellipse" */}
           <Box top={{ md: "50px" }} right={{ md: "-470px" }} left={{ md: "20px" }} position={{ md: "absolute" }} className="rotate2" zIndex={{ md: "-1" }}>
             <Image src={BalloonPink} alt={"Balloon Pink Ellipse"} display={{ base: "none", md: "block" }} />
@@ -370,8 +371,9 @@ function Products4() {
           {/* Red Circle */}
           <Box className="floating" border-radius="50%" bg={"#eb3b67"} height={"150px"} width={"150px"} position="absolute" right={"20px"} zIndex={"-1"} top={{ lg: "370px" }} rounded="full" display={{ base: "none", lg: "block" }} />
 
-          {/* Green Circle */}
-          <Box border-radius="50%" bg={"#2DCA72"} height={"110px"} width={"110px"} position="absolute" right={"420px"} zIndex={"3"} bottom={"10px"} rounded="full" display={{ base: "none", lg: "block" }} />
+
+        {/* Pink Semicircle */}
+        <Box bg={"#00a8f9"} display={{ base: "none", lg: "block" }} transform="rotate(0deg)" bottom="60px" left="110px" h="75px" zIndex={-1} w="150px" position={"absolute"} borderRadius={"150px 150px 0 0"}></Box> 
         </Box>
 
         {/* Text Path */}

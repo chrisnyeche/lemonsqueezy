@@ -78,10 +78,10 @@ export default function Hero() {
         </Box>
 
         {/* Pink Semicircle */}
-        <Box className="semicirclepink" bg={"RGB(254, 194, 246)"} display={{ base: "none", lg: "block" }}></Box> 
+        <Box bg={"RGB(254, 194, 246)"} display={{ base: "none", lg: "block" }} transform="rotate(90deg)" top="40%" left="90%" h="50px" w="90px" position={"absolute"} borderRadius={"150px 150px 0 0"}></Box> 
 
-        {/* Pink Semicircle */}
-        <Box className="semicirclepurple" bg={"#7047EB"} display={{ base: "none", lg: "block" }}></Box>
+        {/* Purple Semicircle */}
+        <Box className="semicircle" bg={"#7047EB"} display={{ base: "none", lg: "block" }} transform="rotate(180deg)" top="67%" left="47%" h="55px" w="110px" position={"absolute"} borderRadius={"150px 150px 0 0"}></Box>
       </Box>
     </Box>
   );
