@@ -7,6 +7,8 @@ import Slider from "react-slick";
 // Images
 import Avatars from "../Images/supportavatars.png";
 import BalloonLightBlue from "../Icons/balloonlightblue.svg";
+import RoundBlue from "../Images/roundblue.png";
+import Tablet from "../Images/tablet.png";
 
 // Icons
 import { CgArrowLongRight, CgArrowRight, CgArrowLeft } from "react-icons/cg";
@@ -28,6 +30,7 @@ export default function Testimonials() {
     <Box as="section">
       <Carousel />
       <Support />
+      <Analysis />
     </Box>
   );
 }
@@ -259,15 +262,14 @@ export class Carousel extends Component {
 // Support
 export function Support() {
   return (
-    <Box as="section" h={{ base: "170vh", md: "120vh", lg: "130vh" }} mx="auto" className="border border-danger" display={"flex"} alignItems={"center"} position={"relative"} overflow="hidden">
+    <Box as="section" h={{ base: "180vh", md: "120vh", lg: "130vh" }} mx="auto" display={"flex"} alignItems={"center"} position={"relative"} overflow="hidden">
       <Center flexDirection={{ base: "column", md: "row" }} p={5} alignItems={"center"} justifyContent={"space-between"} gap={"50px"}>
-
         {/* Balloon Light Blue */}
-        <Image src={BalloonLightBlue} transform={"rotate(143deg)"} alt={"Balloon Light Blue"} position="absolute" left={"-325px"} top={"-600px"} zIndex={"0"} display={{base: "none", lg: "flex"}}/>
+        <Image src={BalloonLightBlue} transform={"rotate(143deg)"} alt={"Balloon Light Blue"} position="absolute" left={"-325px"} top={"-600px"} zIndex={"0"} display={{ base: "none", lg: "flex" }} />
 
         {/* Support Image */}
         <Flex justifyContent={{ base: "center", lg: "end" }} className={"floating"}>
-          <Image src={Avatars} alt={"Support Avatars"} w={{base: "100%", lg: "80%"}} />
+          <Image src={Avatars} alt={"Support Avatars"} w={{ base: "100%", lg: "80%" }} />
         </Flex>
 
         {/* Support Text */}
@@ -352,6 +354,67 @@ export function Support() {
           </Box>
         </Box>
       </Center>
+    </Box>
+  );
+}
+
+// Analysis
+export function Analysis() {
+  return (
+    <Box as="section" h={{ base: "90vh", md: "120vh", lg: "150vh" }} mx="auto" alignItems={"center"} position={"relative"} overflow="hidden" bg="#7047EB">
+
+      {/* Yellow large Circle */}
+      <Box border-radius="50%" bg={"#FFC233"} height={"900px"} width={"900px"} position="absolute" left={{base: "-270px", lg: "-180px"}} top={{base: "370px", lg: "580px"}} zIndex={"0"} rounded="full"/>
+
+      {/* Pink large Circle */}
+      <Box border-radius="50%" bg={"#FCC5F3"} height={"500px"} width={"500px"} position="absolute" right={{base:"-290px", md: "-90px", lg: "-50px"}} top={{base:"360px", lg: "580px"}} zIndex={"0"} rounded="full" className={"floating"} />
+
+      {/* Blue Semicircle */}
+      <Box display={{ base: "none", lg: "block" }} transform={"rotate(3deg)"} top={"-20px"} left="55px" h="155px" w="157px" position={"absolute"}>
+        <Image src={RoundBlue} alt={"Round Blue"} />
+      </Box>
+
+      {/* Tablet */}
+      <Box top={{ base: "60%", md: "50%", lg: "35%" }} position={"absolute"} zIndex={2}>
+        <Image src={Tablet} alt={"Tablet of Analysis"} w="100%" />
+      </Box>
+
+      {/* Text Content */}
+      <Flex py={{ base: "24px", lg: "89px" }} flexDirection={{ base: "column", lg: "row" }} justifyContent={"space-between"} alignItems="center" maxW={{ base: "90%", md: "80%", lg: "60%" }} mx="auto">
+
+        {/* Text path */}
+        <Box maxW={{ base: "100%", lg: "520px" }} lineHeight={"70px"}>
+          <Text color={"#ffc233"} fontWeight={"500"}>
+            Elevate your business
+          </Text>
+          <Heading as="h2" fontWeight={"400"} fontSize={{ base: "24px", md: "40px", lg: "44px" }} color="white">
+            Take your business to the next level with Lemon Squeezy
+          </Heading>
+        </Box>
+
+        {/* Button */}
+        <Box textAlign={"center"} my={{ base: "40px", md: "15px" }}>
+          {/* Get Started */}
+          <Button
+            fontSize={"sm"}
+            fontWeight={400}
+            bg={"white"}
+            py={8}
+            px={"50px"}
+            borderRadius={"30px"}
+            rightIcon={<CgArrowLongRight fontSize={"38px"} />}
+            href={"#"}
+            _hover={{
+              color: "#7047eb",
+            }}
+          >
+            Get Started
+          </Button>
+          <Text color={"#AEAFD8"} fontSize={"14px"} lineHeight={7} my={3}>
+            No credit card required
+          </Text>
+        </Box>
+      </Flex>
     </Box>
   );
 }
