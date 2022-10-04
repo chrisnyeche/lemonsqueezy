@@ -220,7 +220,7 @@ export class Carousel extends Component {
             {/* Testimonial Card */}
             {testimonialCards.map((card) => {
               return (
-                <Box as="section" h="550px" w="300px" p="5" key={card.name} zIndex={2} className="border">
+                <Box as="section" h="550px" w="300px" p="5" key={card.name} zIndex={2}>
                   <Box bg={"white"} h={{ base: "500px", md: "480px", lg: "385px" }} w={{ base: "275px", sm: "200px", md: "305px", lg: "255px" }} mx="auto" lineHeight="32px" p="5" borderRadius={"15px"}>
                     <Box h="82%">
                       <Image src={card.icon} alt={card.icon} />
