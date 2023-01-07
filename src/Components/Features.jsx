@@ -45,6 +45,7 @@ import DesignHandBook from "../Images/designhandbook.jpg"; // image for product 
 import Revenue from "../Images/revenue.jpg"; // image for product 4
 import RevenueSmall from "../Images/revenue-small.jpg"; // image for product 4
 
+
 // CSS
 import "./Components.css";
 
